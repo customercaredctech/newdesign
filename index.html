@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission Navigate — Homepage Preview</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<a class="screen-reader-text" href="#primary">Skip to content</a>
+
+<!-- ════════ TOP CONTACT STRIP ════════ -->
+<div class="top-strip">
+  <div class="container top-strip-wrap">
+    <div class="top-strip-left">
+      <a href="tel:+17789382133"><i class="fas fa-phone-alt"></i> +1 (778) 938-2133</a>
+      <a href="mailto:info@admissionnavigate.com"><i class="fas fa-envelope"></i> info@admissionnavigate.com</a>
+    </div>
+    <div class="top-strip-right">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/17789382133" class="top-strip-wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#book" class="top-strip-cta">Free Consultation <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ HEADER ════════ -->
+<header class="header">
+  <div class="container header-wrap">
+    <a href="#" class="logo">
+      <img src="assets/images/logo.jpg" alt="Admission Navigate">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#study-canada">Study in Canada</a></li>
+        <li><a href="#">Colleges</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-navy header-cta"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+    <button class="mobile-toggle" id="menuBtn" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-nav-list">
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#study-canada">Study in Canada</a></li>
+    <li><a href="#">Colleges</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+  <a href="#book" class="btn btn-navy" style="text-align:center;">Book Consultation</a>
+</div>
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<main id="primary">
+
+<!-- ════════ HERO ════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-star"></i> Trusted by 500+ Students Across Canada</div>
+      <h1>Your Pathway to Top <span class="text-gold">Canadian Colleges & Universities</span></h1>
+      <p style="text-align:justify">Expert educational consulting and admission guidance - let us help you navigate the admissions process to secure your spot at one of Canada's leading institutions.<br>
+      Unlock the door to your academic dreams with Admission Navigate Consultancy. As dedicated education consultants, we help you envision a new chapter in Canada — exploring the right programs, choosing the right college, and building a path toward the future you're working for. We understand that every student's journey is unique, and we're here as your partners, not just service providers, in making that journey a success.</p>
+      <div class="hero-stats">
+        <div class="h-stat"><h4 class="an-counter" data-target="3" data-suffix="+">0+</h4><span>Years Exp.</span></div>
+        <div class="h-stat"><h4 class="an-counter" data-target="20" data-suffix="+">0+</h4><span>Partner Colleges</span></div>
+        <div class="h-stat"><h4 class="an-counter" data-target="98" data-suffix="%">0%</h4><span>Admission Success Rate</span></div>
+      </div>
+    </div>
+    <div class="hero-form" id="book">
+      <span class="hero-form-ribbon"><i class="fas fa-bolt"></i> Free</span>
+      <h3 style="margin-bottom:0.25rem;">Book Free Consultation</h3>
+      <p style="margin-bottom:1rem;">Fill out the form below and an expert counselor will contact you shortly.</p>
+      <form onsubmit="return false;">
+        <div class="form-group"><label>Full Name</label><input type="text" class="form-control" placeholder="Full Name"></div>
+        <div class="form-group"><label>Email Address</label><input type="email" class="form-control" placeholder="name@example.com"></div>
+        <div class="form-group"><label>WhatsApp Number</label><input type="tel" class="form-control" placeholder="+1 XXX XXX XXXX"></div>
+        <div class="form-group">
+          <label>Level of Study</label>
+          <select class="form-control">
+            <option>Select Level</option>
+            <option>Diploma / Advanced Diploma</option>
+            <option>Bachelor's Degree</option>
+            <option>Post-Graduate Certificate</option>
+            <option>Master's Degree</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold btn-full">Schedule Consultation</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ WHY CHOOSE US ════════ -->
+<section class="features" id="why-choose-us" style="margin-top:0;padding:5rem 0 3rem;">
+  <div class="container">
+    <div class="sec-title" style="text-align:center;margin-bottom:3.5rem;">
+      <h2>Why <span class="text-gold">Choose Us</span></h2>
+      <p>At Admission Navigate, our values shape everything we do.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card"><div class="feat-icon"><i class="fas fa-award"></i></div><h4>Excellence</h4><p>Every recommendation we make meets the highest standard of care and accuracy.</p></div>
+      <div class="feat-card"><div class="feat-icon"><i class="fas fa-handshake"></i></div><h4>Integrity</h4><p>We believe in transparent, honest communication and building trust through every interaction.</p></div>
+      <div class="feat-card"><div class="feat-icon"><i class="fas fa-hand-holding-heart"></i></div><h4>Client-Centered</h4><p>Your goals come first. We tailor our guidance to your academic background, budget, and aspirations.</p></div>
+      <div class="feat-card"><div class="feat-icon"><i class="fas fa-brain"></i></div><h4>Continuous Learning</h4><p>We stay current on Canadian college admissions, program changes, and intake requirements so you don't have to.</p></div>
+      <div class="feat-card"><div class="feat-icon"><i class="fas fa-hands-helping"></i></div><h4>Compassion</h4><p>Starting a new academic chapter abroad can be overwhelming. We offer patient, supportive guidance every step of the way.</p></div>
+      <div class="feat-card"><div class="feat-icon"><i class="fas fa-shield-alt"></i></div><h4>Ethical Scope</h4><p>We are proud to be education consultants — not immigration representatives — and we work within that scope so you always know exactly what kind of advice you're getting from us.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ ABOUT US ════════ -->
+<section class="section bg-white" id="about">
+  <div class="container split">
+    <div class="split-img about-carousel" id="aboutCarousel">
+      <div class="carousel-track">
+        <img src="assets/images/alt_about_students.png" alt="Students planning their study path" class="carousel-slide active">
+        <img src="assets/images/hero_student.png" alt="International student ready for Canada" class="carousel-slide">
+        <img src="assets/images/alt_hero_campus.png" alt="Canadian college campus" class="carousel-slide">
+        <img src="assets/images/v3_students_tech.png" alt="Students collaborating on their applications" class="carousel-slide">
+      </div>
+      <div class="carousel-dots">
+        <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+        <button class="carousel-dot" data-index="3" aria-label="Slide 4"></button>
+      </div>
+    </div>
+    <div class="split-text">
+      <h2>About Admission Navigate</h2>
+      <p>Admission Navigate Consultancy is an educational advisory firm dedicated to helping students find the right fit among Canada's colleges and universities. We believe every student deserves access to world-class education without the stress of navigating complex application processes alone.</p>
+      <p>We are your partners in:</p>
+      <ul class="check-list">
+        <li><i class="fas fa-check-circle"></i> Honest, transparent program and college evaluations</li>
+        <li><i class="fas fa-check-circle"></i> Tailored recommendations based on your academic profile and goals</li>
+        <li><i class="fas fa-check-circle"></i> Dedicated support through your application journey</li>
+        <li><i class="fas fa-check-circle"></i> Clear, judgment-free answers to your questions</li>
+      </ul>
+      <a href="#book" class="btn btn-outline">Consult An Expert</a>
+    </div>
+    <div class="disclaimer-text" style="flex: 0 0 100%; width: 100%; grid-column: 1 / -1; clear: both; margin-top: 2.5rem; font-size: 0.85rem; color: #666; border-top: 1px solid #eee; padding-top: 1rem;">
+      <p style="text-align:justify"><strong>Important:</strong> Admission Navigate Consultancy provides education counselling and admission guidance only. We do not offer immigration advice, and we do not have a Regulated Canadian Immigration Consultant (RCIC) on our team. For anything related to visa applications, permanent residency strategy, or other regulated immigration matters, we always encourage clients to consult a licensed immigration professional.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SERVICES ════════ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="sec-title"><h2>Our Core <span class="text-gold">Services</span></h2></div>
+    <div class="srv-grid">
+      <div class="srv-card"><i class="fas fa-chalkboard-teacher"></i><h4>Educational Counselling</h4><p>One-on-one sessions to map out your academic goals and the programs that fit them.</p></div>
+      <div class="srv-card"><i class="fas fa-university"></i><h4>College & University Selection</h4><p>Shortlisting institutions that match your profile, interests, and budget.</p></div>
+      <div class="srv-card"><i class="fas fa-sliders-h"></i><h4>Program Selection</h4><p>Helping you identify in-demand programs with strong outcomes after graduation.</p></div>
+      <div class="srv-card"><i class="fas fa-file-signature"></i><h4>Admission Application Support</h4><p>Guidance through forms, document checklists, and submission timelines.</p></div>
+      <div class="srv-card"><i class="fas fa-pen-nib"></i><h4>SOP & Resume Support</h4><p>Helping you put your best foot forward with compelling, well-structured application materials.</p></div>
+      <div class="srv-card"><i class="fas fa-user-tie"></i><h4>Interview Prep</h4><p>Mock interviews for university admissions and visa officers (if required).</p></div>
+      <div class="srv-card"><i class="fas fa-hand-holding-usd"></i><h4>Scholarship & Financial Aid Guidance</h4><p>Helping you identify institutional scholarships and funding opportunities you may qualify for.</p></div>
+      <div class="srv-card"><i class="fas fa-plane-arrival"></i><h4>General Pre-Arrival Guidance</h4><p>Practical tips on Canadian culture, weather, banking basics, and what to expect on arrival.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ STUDY IN CANADA ════════ -->
+<section class="section bg-navy" id="study-canada">
+  <div class="container">
+    <div class="sec-title">
+      <h2>Why Study in <span class="text-gold">Canada?</span></h2>
+      <p>Canada consistently ranks among the best countries in the world for international students.</p>
+    </div>
+    <div class="canada-grid">
+      <div class="can-card"><h4><i class="fas fa-graduation-cap"></i> World-Class Education</h4><p>Canadian credentials are globally recognized, backed by strong academic standards.</p></div>
+      <div class="can-card"><h4><i class="fas fa-puzzle-piece"></i> Hands-On Learning</h4><p>Many programs are built around co-ops, practicums, and industry placements that build real workplace experience.</p></div>
+      <div class="can-card"><h4><i class="fas fa-user-tie"></i> Strong Career Outcomes</h4><p>Canadian institutions are known for programs closely aligned with in-demand career paths.</p></div>
+      <div class="can-card"><h4><i class="fas fa-map-marked-alt"></i> Choose Your Province</h4><p>From Ontario's tech hubs to British Columbia's coastlines, Canada has a community for every student.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ ADMISSION TIMELINE ════════ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-title"><h2>Admission <span class="text-gold">Timeline</span></h2></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot">1</div><div class="tl-content"><h4>Initial Consultation</h4><p>We review your academic background, test scores (IELTS/PTE), and budget to build a study plan that fits you.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">2</div><div class="tl-content"><h4>Program Shortlisting</h4><p>We help you compare 3–4 well-matched institutions and programs.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">3</div><div class="tl-content"><h4>Application Submission</h4><p>We help prepare and organize your documents ahead of submission deadlines.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">4</div><div class="tl-content"><h4>Offer Letter Support</h4><p>Once you receive your Letter of Acceptance (LOA), we walk you through next steps like tuition deposits.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">5</div><div class="tl-content"><h4>Next-Steps Guidance</h4><p>We help you understand what comes after your offer letter, and point you toward a licensed immigration professional for any visa or permit-related matters.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PARTNER COLLEGE LOGO MARQUEE ════════ -->
+<section class="an-logo-marquee-wrap" aria-label="Our Partner Institutions">
+  <div class="container">
+    <div class="sec-title" style="text-align:center;">
+      <h2>Our Partner <span class="text-gold">Colleges & Universities</span></h2>
+      <p>We represent top colleges across Canada. Filter by your preferences to find the perfect match.</p>
+    </div>
+  </div>
+  <div class="an-marquee">
+    <div class="an-marquee-track">
+      <div class="an-marquee-item"><img src="assets/images/colleges/GRANVILLE.png" alt="Granville College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/VCCT.png" alt="VCCT College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/AVALON.png" alt="Avalon College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/FOCUS.png" alt="Focus College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/PIMT.png" alt="PIMT College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/GRANVILLE.png" alt="Granville College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/VCCT.png" alt="VCCT College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/AVALON.png" alt="Avalon College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/FOCUS.png" alt="Focus College" loading="lazy" width="140" height="60"></div>
+      <div class="an-marquee-item"><img src="assets/images/colleges/PIMT.png" alt="PIMT College" loading="lazy" width="140" height="60"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TESTIMONIALS ════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="sec-title">
+      <h2>Student <span class="text-gold">Success Stories</span></h2>
+      <p>Hear from students who successfully navigated their Canadian admissions with us.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Very professional and transparent. They never made false promises, unlike some other consultants. Instead, they built a very strong profile assessment and identified the best-fit colleges for me. I got acceptances from 3 out of 4 universities I applied to."</p>
+        <div class="testi-user"><div class="testi-av">D</div><div><h5>David K.</h5><span>Dalhousie University, Halifax, Nova Scotia</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"I was overwhelmed by the GIC process and study permit requirements, but my counselor made everything crystal clear. She even helped me save on tuition by finding a scholarship I never knew I qualified for. Absolutely fantastic service!"</p>
+        <div class="testi-user"><div class="testi-av">S</div><div><h5>Sarah A.</h5><span>Langara College, Vancouver, BC</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <p>"The team at Admission Navigate was incredibly supportive throughout my application journey. They guided me on program selection, helped craft a compelling SOP, and ensured all documents were submitted on time. My visa was approved within 4 weeks under SDS!"</p>
+        <div class="testi-user"><div class="testi-av">R</div><div><h5>Rahul M.</h5><span>Seneca College, Toronto, Ontario</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FAQ ════════ -->
+<section class="section" id="resources">
+  <div class="container">
+    <div class="sec-title"><h2>Frequently Asked <span class="text-gold">Questions</span></h2></div>
+    <div class="faq-box">
+      <div class="faq-item open">
+        <div class="faq-q">Do you provide immigration advice? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">No. Admission Navigate Consultancy is an education consulting firm. We do not have a Regulated Canadian Immigration Consultant (RCIC) on staff and do not offer immigration advice. For visa strategy, permanent residency applications, or other regulated immigration matters, we recommend working with a licensed immigration professional.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you charge for the initial consultation? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">No — your first consultation with us is completely free.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much does it cost to study in Canada? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Tuition varies by program and institution, typically ranging from $15,000–$35,000 CAD per year. Students should also budget for living expenses, which vary by city and lifestyle — we're happy to walk you through general estimates during your consultation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What are my career prospects after graduating? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">This depends on your program and field of study — many Canadian credentials are well-regarded by employers. We can help you choose programs with strong outcomes, though any questions about work permits or immigration status should go to a licensed immigration professional.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CONTACT US ════════ -->
+<section class="section bg-white" id="contact">
+  <div class="container">
+    <div class="sec-title">
+      <h2>Contact <span class="text-gold">Us</span></h2>
+      <p>Reach out directly, or use the form below — we typically respond within 24 hours.</p>
+    </div>
+    <div class="split" style="align-items:start;gap:4rem;">
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div class="feat-card" style="text-align:left;padding:2rem;">
+          <h4 style="color:var(--c-navy);margin-bottom:0.75rem;"><i class="fas fa-map-marker-alt" style="color:var(--c-gold);margin-right:0.5rem;"></i> Head Office</h4>
+          <p>7404 King George Blvd, Suite 217, Surrey, BC, Canada V3W 1N6</p>
+        </div>
+        <div class="feat-card" style="text-align:left;padding:2rem;">
+          <h4 style="color:var(--c-navy);margin-bottom:0.75rem;"><i class="fas fa-envelope" style="color:var(--c-gold);margin-right:0.5rem;"></i> Email Us</h4>
+          <p><a href="#" style="color:var(--c-navy);">info@admissionnavigate.com</a></p>
+        </div>
+        <div class="feat-card" style="text-align:left;padding:2rem;">
+          <h4 style="color:var(--c-navy);margin-bottom:0.75rem;"><i class="fas fa-phone" style="color:var(--c-gold);margin-right:0.5rem;"></i> Call / WhatsApp</h4>
+          <p>+1 (778) 938-2133</p>
+          <a href="#" class="btn btn-gold btn-sm" style="margin-top:1rem;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-form" style="box-shadow:var(--shadow-md);border:1px solid var(--c-border);">
+        <h3 style="color:var(--c-navy);margin-bottom:0.25rem;">Send Us a Message</h3>
+        <p style="font-size:0.9rem;color:var(--c-text-light);margin-bottom:1rem;">Have a question? Drop us a note and an advisor will reply shortly.</p>
+        <form onsubmit="return false;">
+          <div class="form-group"><label>Your Name</label><input type="text" class="form-control" placeholder="John Doe"></div>
+          <div class="form-group"><label>Email Address</label><input type="email" class="form-control" placeholder="john@example.com"></div>
+          <div class="form-group"><label>Subject</label><input type="text" class="form-control" placeholder="e.g. Query about Humber College"></div>
+          <div class="form-group"><label>Message</label><textarea class="form-control" style="height:110px;resize:none;" placeholder="Tell us about your academic background and query..."></textarea></div>
+          <button type="submit" class="btn btn-navy btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CTA BANNER ════════ -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to Start Your Canadian Dream?</h2>
+      <p>Don't leave your education to chance. Speak to an expert today and secure your future.</p>
+      <a href="#book" class="btn btn-navy" style="background:var(--c-navy-dark);color:white;border-radius:999px;padding:1rem 3rem;">Book Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════ MAP ════════ -->
+<section class="map-section reveal" aria-label="Our Office Location">
+  <div class="map-card">
+    <i class="fas fa-map-marker-alt"></i>
+    <div>
+      <h4>Visit Our Office</h4>
+      <p>7404 King George Blvd, Suite 217, Surrey, BC, Canada</p>
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=7404+King+George+Blvd+Surrey+BC+V3W+1N6" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Get Directions</a>
+  </div>
+  <iframe
+    src="https://www.google.com/maps?q=7404+King+George+Blvd,+Surrey,+BC+V3W+1N6,+Canada&output=embed"
+    width="100%" height="480" style="border:0;" allowfullscreen=""
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="Admission Navigate Consultancy — Office Location"></iframe>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer">
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <img src="assets/images/logo_foot.png" alt="Admission Navigate">
+      <p>Admission Navigate Consultancy is your trusted partner for navigating college and university admissions across Canada.</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#study-canada">Study in Canada</a></li>
+        <li><a href="#">Partner Colleges</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contact Us</h4>
+      <ul class="foot-contact-list">
+        <li><a href="https://www.google.com/maps/search/?api=1&query=7404+King+George+Blvd+Surrey+BC+V3W+1N6" target="_blank" rel="noopener"><span class="foot-icon"><i class="fas fa-map-marker-alt"></i></span> 7404 King George Blvd, Suite 217, Surrey, BC, Canada V3W 1N6</a></li>
+        <li><a href="mailto:info@admissionnavigate.com"><span class="foot-icon"><i class="fas fa-envelope"></i></span> info@admissionnavigate.com</a></li>
+        <li><a href="tel:+17789382133"><span class="foot-icon"><i class="fas fa-phone-alt"></i></span> +1 (778) 938-2133</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Newsletter</h4>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin-bottom:1rem;">Get the latest updates on courses, available intakes and scholarship opportunities.</p>
+      <div class="nl-form"><input type="email" placeholder="Your email"><button>Subscribe</button></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="foot-disclaimer"><strong>Disclaimer:</strong> Admission Navigate Consultancy provides educational consulting and admission guidance services only. We do not guarantee admission decisions and do not provide immigration advice. We do not have a Regulated Canadian Immigration Consultant (RCIC) on our team.</div>
+    <div class="foot-bottom">
+      <span>© 2026 Admission Navigate. All rights reserved.</span>
+      <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/17789382133" class="wa-btn" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener">
+  <span class="wa-avatar">
+    <span class="wa-ping"></span>
+    <span class="wa-bubble"><i class="fab fa-whatsapp"></i></span>
+  </span>
+  <span class="wa-label">Chat with us<small>Typically replies instantly</small></span>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>
