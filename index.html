@@ -243,21 +243,36 @@
       <h2>Student <span class="text-gold">Success Stories</span></h2>
       <p>Hear from students who successfully navigated their Canadian admissions with us.</p>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>"Very professional and transparent. They never made false promises, unlike some other consultants. Instead, they built a very strong profile assessment and identified the best-fit colleges for me. I got acceptances from 3 out of 4 universities I applied to."</p>
-        <div class="testi-user"><div class="testi-av">D</div><div><h5>David K.</h5><span>Dalhousie University, Halifax, Nova Scotia</span></div></div>
+    <div class="testi-carousel" id="testiCarousel">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-slide">
+          <div class="testi-card">
+            <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Very professional and transparent. They never made false promises, unlike some other consultants. Instead, they built a very strong profile assessment and identified the best-fit colleges for me. I got acceptances from 3 out of 4 universities I applied to."</p>
+            <div class="testi-user"><div class="testi-av">D</div><div><h5>David K.</h5><span>Dalhousie University, Halifax, Nova Scotia</span></div></div>
+          </div>
+        </div>
+        <div class="testi-slide">
+          <div class="testi-card">
+            <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"I was overwhelmed by the GIC process and study permit requirements, but my counselor made everything crystal clear. She even helped me save on tuition by finding a scholarship I never knew I qualified for. Absolutely fantastic service!"</p>
+            <div class="testi-user"><div class="testi-av">S</div><div><h5>Sarah A.</h5><span>Langara College, Vancouver, BC</span></div></div>
+          </div>
+        </div>
+        <div class="testi-slide">
+          <div class="testi-card">
+            <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+            <p>"The team at Admission Navigate was incredibly supportive throughout my application journey. They guided me on program selection, helped craft a compelling SOP, and ensured all documents were submitted on time. My visa was approved within 4 weeks under SDS!"</p>
+            <div class="testi-user"><div class="testi-av">R</div><div><h5>Rahul M.</h5><span>Seneca College, Toronto, Ontario</span></div></div>
+          </div>
+        </div>
       </div>
-      <div class="testi-card">
-        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>"I was overwhelmed by the GIC process and study permit requirements, but my counselor made everything crystal clear. She even helped me save on tuition by finding a scholarship I never knew I qualified for. Absolutely fantastic service!"</p>
-        <div class="testi-user"><div class="testi-av">S</div><div><h5>Sarah A.</h5><span>Langara College, Vancouver, BC</span></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-        <p>"The team at Admission Navigate was incredibly supportive throughout my application journey. They guided me on program selection, helped craft a compelling SOP, and ensured all documents were submitted on time. My visa was approved within 4 weeks under SDS!"</p>
-        <div class="testi-user"><div class="testi-av">R</div><div><h5>Rahul M.</h5><span>Seneca College, Toronto, Ontario</span></div></div>
+      <button class="testi-arrow testi-arrow-prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+      <button class="testi-arrow testi-arrow-next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+      <div class="testi-dots">
+        <button class="testi-dot active" data-index="0" aria-label="Testimonial 1"></button>
+        <button class="testi-dot" data-index="1" aria-label="Testimonial 2"></button>
+        <button class="testi-dot" data-index="2" aria-label="Testimonial 3"></button>
       </div>
     </div>
   </div>
@@ -407,6 +422,11 @@
   </span>
   <span class="wa-label">Chat with us<small>Typically replies instantly</small></span>
 </a>
+
+<button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+  <span class="btt-ring"></span>
+  <i class="fas fa-arrow-up"></i>
+</button>
 
 <script src="main.js"></script>
 </body>

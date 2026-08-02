@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuOverlay?.classList.remove('active');
     menuBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    document.body.classList.remove('menu-open');
     const icon = menuBtn.querySelector('i');
     if (icon) icon.className = 'fas fa-bars';
   }
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.stopPropagation();
       const isActive = mobileMenu.classList.toggle('active');
       menuOverlay?.classList.toggle('active', isActive);
+      document.body.classList.toggle('menu-open', isActive);
 
       // Sync accessibility attributes
       menuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
@@ -155,7 +157,105 @@ document.addEventListener('DOMContentLoaded', function() {
   initHeroParallax();
   initSectionReveal();
   initAboutCarousel();
+  initTestimonialCarousel();
+  initBackToTop();
 });
+
+// ── Back to top — appears once you've scrolled down, animated in/out ──
+function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+
+  function toggle() {
+    if (window.scrollY > 480) btn.classList.add('is-visible');
+    else btn.classList.remove('is-visible');
+  }
+  toggle();
+  window.addEventListener('scroll', toggle, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ── Testimonials — center-mode auto-scrolling carousel ──
+function initTestimonialCarousel() {
+  const carousel = document.getElementById('testiCarousel');
+  const track = document.getElementById('testiTrack');
+  if (!carousel || !track) return;
+
+  const slides = Array.from(track.querySelectorAll('.testi-slide'));
+  const dots = Array.from(carousel.querySelectorAll('.testi-dot'));
+  const prevBtn = carousel.querySelector('.testi-arrow-prev');
+  const nextBtn = carousel.querySelector('.testi-arrow-next');
+  if (!slides.length) return;
+
+  let current = 0;
+  let autoTimer = null;
+  let resumeTimer = null;
+  const intervalMs = 4800;
+
+  function setActive(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function goTo(index, behavior = 'smooth') {
+    index = (index + slides.length) % slides.length;
+    const slide = slides[index];
+    const target = slide.offsetLeft - (track.clientWidth - slide.clientWidth) / 2;
+    track.scrollTo({ left: target, behavior });
+    setActive(index);
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = window.setInterval(next, intervalMs);
+  }
+  function stopAuto() {
+    if (autoTimer) { window.clearInterval(autoTimer); autoTimer = null; }
+  }
+  function pauseThenResume() {
+    stopAuto();
+    if (resumeTimer) window.clearTimeout(resumeTimer);
+    resumeTimer = window.setTimeout(startAuto, 6000);
+  }
+
+  // Detect which slide is nearest-center as the user scrolls/swipes manually
+  let scrollRAF = null;
+  track.addEventListener('scroll', () => {
+    pauseThenResume();
+    if (scrollRAF) return;
+    scrollRAF = window.requestAnimationFrame(() => {
+      scrollRAF = null;
+      const center = track.scrollLeft + track.clientWidth / 2;
+      let closest = 0, closestDist = Infinity;
+      slides.forEach((s, i) => {
+        const dist = Math.abs((s.offsetLeft + s.clientWidth / 2) - center);
+        if (dist < closestDist) { closestDist = dist; closest = i; }
+      });
+      current = closest;
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    });
+  }, { passive: true });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => { goTo(parseInt(dot.dataset.index, 10)); pauseThenResume(); });
+  });
+  nextBtn?.addEventListener('click', () => { next(); pauseThenResume(); });
+  prevBtn?.addEventListener('click', () => { prev(); pauseThenResume(); });
+  carousel.addEventListener('mouseenter', stopAuto);
+  carousel.addEventListener('mouseleave', startAuto);
+
+  // Initial centering once layout has settled
+  window.requestAnimationFrame(() => { goTo(0, 'auto'); startAuto(); });
+  window.addEventListener('resize', () => goTo(current, 'auto'));
+}
 
 // ── About Us — auto-advancing image carousel with dots + hover pause ──
 function initAboutCarousel() {
@@ -261,7 +361,7 @@ function initButtonRipple() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) return;
 
-  document.querySelectorAll('.btn, .wa-btn, .top-strip-cta').forEach(btn => {
+  document.querySelectorAll('.btn, .wa-btn, .top-strip-cta, .back-to-top').forEach(btn => {
     btn.addEventListener('click', function (e) {
       const rect = btn.getBoundingClientRect();
       const ripple = document.createElement('span');
@@ -291,10 +391,10 @@ function initScrollReveal() {
   if (prefersReducedMotion) return;
 
   // Auto-tag common homepage elements so no template markup has to change.
-  const groupSelectors = ['.features-grid', '.srv-grid', '.canada-grid', '.testi-grid'];
+  const groupSelectors = ['.features-grid', '.srv-grid', '.canada-grid'];
   groupSelectors.forEach(sel => document.querySelector(sel)?.classList.add('reveal-group'));
 
-  const singleSelectors = ['.sec-title', '.tl-item', '.faq-item', '.cta-banner', '.map-section', '#contact .feat-card', '.hero-form-ribbon', '.foot-col'];
+  const singleSelectors = ['.sec-title', '.tl-item', '.faq-item', '.cta-banner', '.map-section', '#contact .feat-card', '.hero-form-ribbon', '.foot-col', '.testi-carousel'];
   singleSelectors.forEach(sel => {
     document.querySelectorAll(sel).forEach(el => el.classList.add('reveal'));
   });
